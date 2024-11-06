@@ -41,13 +41,16 @@ function mul(n, m) {
 console.log(mul(5, 3))
 console.log(mul(10, 4))
 
-function myAverageScore(total) {
-	total 
-	if (total >= 91 && total <= 100) {
+const myAverageScore = (...arg) => {
+		let result = 0
+		for (let index = 0; index < arg.length; index++) {
+			result = result + arg[index]
+		}
+	if (result >= 91 && result <= 100) {
 		console.log('My average score: A')
-	} else if (total >= 81 && total <= 90) {
+	} else if (result >= 81 && result <= 90) {
 		console.log('My average score: B')
-	} else if (total >= 71 && total <= 80) {
+	} else if (result >= 71 && result <= 80) {
 		console.log('My average score: C')
 	} else {
 		console.log('My average score: D')
